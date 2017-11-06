@@ -28,6 +28,7 @@ class BaseStack:
         Pops the first item of the Stack
         :return:
         """
+        return self.items.pop()
 
     def push(self, push_item):
         """
@@ -37,10 +38,9 @@ class BaseStack:
         """
         # - If max_length is set make sure oldest item is removed if stack is
         #  getting too long
-        if self.max_length == -1:
-            self.items.append(push_item)
-        else:
-            self.items.append(push_item)
+        if self.get_size() > self.max_length and self.max_length != -1:
+            del self.items[0]
+        self.items.append(push_item)
 
     def get_size(self):
         """
