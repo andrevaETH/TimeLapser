@@ -29,8 +29,22 @@ class BaseStack:
         :return:
         """
 
-    def push(self):
+    def push(self, push_item):
         """
-
+        Adds an item to the stack
+        :param push_item: [object]
         :return:
         """
+        # - If max_length is set make sure oldest item is removed if stack is
+        #  getting too long
+        if self.max_length == -1:
+            self.items.append(push_item)
+        else:
+            self.items.append(push_item)
+
+    def get_size(self):
+        """
+        Returns the current size of the stack
+        :return:
+        """
+        return len(self.items)
