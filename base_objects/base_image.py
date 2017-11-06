@@ -5,14 +5,19 @@ Created on Nov 06 2017 2:38 PM
 """
 
 
-class Base_Image:
+class BaseImage:
     """
     Baseclass for images
     """
 
     def __init__(self):
         """
-
+        Constructor for the BaseImage
         """
 
-    def
+    def load_image(self, path_to_image):
+        """
+
+        :param path_to_image:
+        :return:
+        """
